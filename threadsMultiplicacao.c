@@ -37,7 +37,7 @@ int main(int argc, char* argv[]){
 			A[i][j] = 1+i;
 	}
 
-	thread_count = strtol(argv[1], NULL, 10);
+	thread_count = 3;
 	thread_handles = malloc(thread_count*sizeof(pthread_t));
 	
 	for(thread = 0; thread<thread_count; thread++)
