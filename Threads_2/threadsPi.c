@@ -3,6 +3,8 @@
 #include <pthread.h>
 
 int thread_count;
+int sum;
+#define n 6;
 
 void *Thread_sum(void *rank)
 {
@@ -20,7 +22,7 @@ void *Thread_sum(void *rank)
 
     for (i = my_first_i; i < my_last_i; i++, factor = -factor)
     {
-        sum += factor(2 * i + 1);
+        sum += factor / (2 * i + 1);
     }
     return NULL;
 }
