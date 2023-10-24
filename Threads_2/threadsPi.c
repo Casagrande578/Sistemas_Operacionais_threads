@@ -31,12 +31,6 @@ int main(int argc, char *argv[])
     pthread_t *thread_handles;
     int i;
 
-    for (i = 0; i < M; i++)
-    {
-        for (int j = 0; j < N; j++)
-            A[i][j] = 1 + i;
-    }
-
     thread_count = 3;
     printf("Quantia de threads: %d", thread_count);
     thread_handles = malloc(thread_count * sizeof(pthread_t));
@@ -49,10 +43,5 @@ int main(int argc, char *argv[])
     }
 
     free(thread_handles);
-    printf("\n");
-    for (i = 0; i < N; i++)
-    {
-        printf("%d\n", y[i]);
-    }
     return 0;
 }
