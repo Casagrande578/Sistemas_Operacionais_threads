@@ -4,14 +4,13 @@
 
 int thread_count;
 int sum;
-#define n 6;
 
 void *Thread_sum(void *rank)
 {
     long my_rank = (long)rank;
     double factor;
     long long i;
-    int my_n = n / thread_count;
+    long long my_n = 6 / thread_count;
     long long my_first_i = my_n * my_rank;
     long long my_last_i = my_first_i + my_n;
 
@@ -31,6 +30,7 @@ int main(int argc, char *argv[])
 {
     long thread;
     pthread_t *thread_handles;
+    sum = 0;
 
     thread_count = 3;
     printf("Quantia de threads: %d", thread_count);
