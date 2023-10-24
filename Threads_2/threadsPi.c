@@ -4,7 +4,7 @@
 
 int thread_count;
 
-void *Thread_sum *(void *rank)
+void *Thread_sum(void *rank)
 {
     long my_rank = (long)rank;
     double factor;
